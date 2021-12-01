@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<script>
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+		function myFunction() {
+  			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		function wechat() {
+			alert("Please add: jiazhengbian");
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="myname">
+		Jiazheng Bian
+	</div>
+	<div class="myinfo">
+		UC San Diego | B.S. Electrical Engineering
+	</div>
+	<div class="route">
+		<a href="/welcome">Contact</a>
+		<a href="/cv">Resume</a>
+		<a href="/about">About</a>
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Team</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="/project">Project</a>
+				<a href="http://143.198.98.101/cv">Siyuan Zhang</a>
+				<a href="http://164.90.144.97/cv">Zhenwei Liu</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="social">
+		<a target="_blank" href="https://www.linkedin.com/in/david-bian/">
+			<img src="https://img.icons8.com/dusk/25/000000/linkedin.png"/>
+		</a>
+		<a target="_blank" href="https://github.com/jiazhengb">
+			<img src="https://img.icons8.com/dusk/25/000000/github.png"/>
+		</a>
+		<a href="mailto:jiazhengbian1230@gmail.com">
+			<img src="https://img.icons8.com/dusk/25/000000/gmail.png"/>
+		</a>
+		<a target="_blank" href="https://www.instagram.com/jiazheng_bian/">
+			<img src="https://img.icons8.com/dusk/25/000000/instagram-new.png"/>	
+		</a>
+		<a onclick="wechat()">
+			<img src="https://img.icons8.com/dusk/25/000000/weixing.png"/>
+		</a>
+	</div>
+</body>
+<footer>
+    Copyright 2021, Jiazheng Bian
+</footer>
+</html>

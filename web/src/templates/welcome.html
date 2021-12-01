@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="agile.js"></script>
+    <script>
+        function thanks(){
+            if (confirm("Thanks for visiting")){
+                document.location = '/welcome';
+            }
+        }
+    </script>
+</head>
+<body>
+	<a href="/">Home</a>
+    <div class="welcom_page">
+        <div class="weltxt">Feel free to leave a comment!</div>
+        <div class="show_form">
+            <form id="info" action="">
+                <input type="text" id="fname" placeholder="Name" required>
+                <br><br>
+                <input type="email" id="email" placeholder="Email" required>
+                <br><br>
+                <textarea type="text" id="comment" placeholder="Comment" required></textarea>
+                <br><br>
+                <input type="submit" value="Submit" id="submit_btn" onclick="thanks()"/>
+            </form>
+        </div>
+        <div class="show_visitors">
+            {% for visitor in visitors %}
+            <div class="vard">
+                <div class="vfname">
+                    {{visitor[0]}}
+                </div>
+                <div class="vtime">
+                    {{visitor[1]}}
+                </div>
+                <div class="vcomment">
+                    <div class="in_comment">
+                        {{visitor[2]}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
